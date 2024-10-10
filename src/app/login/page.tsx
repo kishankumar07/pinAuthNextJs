@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import toast,{Toaster} from 'react-hot-toast'
 
 
@@ -26,7 +26,7 @@ export default function Login(){
                   if (isSuccess) {
                     toast.success('Login successful!');
                     setTimeout(()=>{
-                          router.push('/dashboard');  // Redirect only if login is successful
+                          router.push('/dashboard');  
                     },2000)
                   }
                 } catch (error) {

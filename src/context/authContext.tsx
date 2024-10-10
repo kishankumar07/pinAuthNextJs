@@ -43,14 +43,14 @@ export const AuthProvider = ({children}:{children:ReactNode}) =>{
                   return false; 
               }
   
-              // Set user if login is successful
+              
               setUser(username);
-              return true;  // Login successful
+              return true;  
         
             } catch (err) {
               console.error('Unexpected error during login:', err);
               toast.error('An unexpected error occurred. Please try again.');
-              return false;  // Login failed
+              return false;  
             }
           };
           
@@ -60,11 +60,11 @@ export const AuthProvider = ({children}:{children:ReactNode}) =>{
             setUser(null);
       }
 
-       // Persist user session (example with localStorage)
+      
   useEffect(() => {
       const savedUser = localStorage.getItem('authUser');
       if (savedUser) {
-        setUser(savedUser);  // Set the user from localStorage if they were logged in
+        setUser(savedUser);  
       }
       
     }, []);
@@ -76,7 +76,7 @@ export const AuthProvider = ({children}:{children:ReactNode}) =>{
       } else {
         localStorage.removeItem('authUser');
         
-            router.push('/login');  // Only redirect if loading is false
+            router.push('/login'); 
           
       }
     }, [user,router]);
@@ -90,7 +90,7 @@ export const AuthProvider = ({children}:{children:ReactNode}) =>{
       )
 }
 
-// Custom hook for consuming AuthContext
+
 export const useAuth = () => {
       const context = useContext(AuthContext);
       if (!context) {

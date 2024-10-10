@@ -1,8 +1,8 @@
-// components/Navbar.tsx
+
 'use client';
 
 import Link from 'next/link';
-import { useAuth } from '@/context/AuthContext'; // Adjust the import path based on your folder structure
+import { useAuth } from '../context/AuthContext'; 
 
 const Navbar = () => {
   const { user,logout } = useAuth();
