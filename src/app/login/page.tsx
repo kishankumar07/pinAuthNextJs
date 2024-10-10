@@ -30,11 +30,12 @@ export default function Login(){
                     },2000)
                   }
                 } catch (error) {
+                  console.error('error at login page:',error)
               toast.error('Login failed. Please check your credentials.');
             }
           };
       return(
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 min-h-screen flex items-center justify-center">
+            <div className="bg-gradient-to-br from-blue-800 to-indigo-300 min-h-screen flex items-center justify-center">
                   <div className="bg-white p-10 rounded-lg shadow-md w-96">
 
                   <h1 className="text-3xl  font-bold mb-6 text-center text-gray-800">Login</h1>
@@ -45,7 +46,7 @@ export default function Login(){
                         </div>
                         <div>
                              
-                              <input className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Pin" type="text" value={pin} onChange={(e)=>setPin(e.target.value)}/>
+                              <input className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter Pin" type="password" value={pin} onChange={(e)=>setPin(e.target.value)}/>
                         </div>
                         <button type="submit" className="w-full py-3 mt-4  bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300">Login</button>
                   </form>

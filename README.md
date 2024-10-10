@@ -29,7 +29,7 @@ npm -v
 git clone <repository-url>
 
 ```
-Replace <repository-url> with the actual Git URL of the project repository. 
+Replace **`<repository-url>`** with the actual Git URL of the project repository. 
 
 - Navigate to the project folder:
 ```bash
@@ -38,7 +38,7 @@ cd <project-folder>
 ```
 
 ## 3. Install Dependencies
-After cloning the repository, install the project dependencies using either npm or yarn.
+After cloning the repository, install the project dependencies using either **`npm`** or **`yarn`**.
 
 Using npm : 
 
@@ -52,12 +52,12 @@ Using Yarn:
 ```bash
 yarn install
 ```
-This will install all the required packages listed in the package.json file.
+This will install all the required packages listed in the **`package.json`** file.
 
 ## 4. Set Up Environment Variables
 The application requires environment variables for Supabase and other configurations.
 
-1 . In the root of the project directory, create a .env.local file and configure it with Supabase credentials and other necessary environment variables.
+1 . In the root of the project directory, create a **`.env.local`** file and configure it with Supabase credentials and other necessary environment variables.
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
@@ -78,7 +78,7 @@ Using Yarn:
 ```bash
 yarn dev
 ```
-This will start the Next.js development server, typically running on http://localhost:3000.
+This will start the Next.js development server, typically running on **`http://localhost:3000`**.
 
 You should now be able to access the application by opening your browser and visiting:
 
@@ -91,23 +91,23 @@ http://localhost:3000
 
 Here are some additional scripts you can run:
 
-- npm run build or yarn build: Creates an optimized production build of the application.
-- npm run start or yarn start: Runs the production build of the application.
-- npm run lint or yarn lint: Lints the codebase for any style issues or errors.
+- **`npm run build`** or **`yarn build`**: Creates an optimized production build of the application.
+- **`npm run start`** or **`yarn start`**: Runs the production build of the application.
+- **`npm run lint`** or **`yarn lint`**: Lints the codebase for any style issues or errors.
 
 ## 7. Addtional Configuratins
-- Bcrypt Compatibility: If you are using bcrypt (as in this project), ensure the bcrypt module works properly in your environment. In case of issues, verify that all required native dependencies for bcrypt are installed.
+- Bcrypt Compatibility: If you are using bcrypt (as in this project), ensure the **`bcrypt`** module works properly in your environment. In case of issues, verify that all required native dependencies for **`bcrypt`** are installed.
 
 ## 8. Troubleshooting
 If you encounter issues during setup or running the project:
-- Ensure that all dependencies are properly installed by deleting node_modules and reinstalling:
+- Ensure that all dependencies are properly installed by deleting **`node_modules`** and reinstalling:
 
 ```bash
 rm -rf node_modules
 npm install
 
 ```
-- Double-check that the environment variables are set correctly in .env.local.
+- Double-check that the environment variables are set correctly in **`.env.local`**.
 
 ## 9. Building for Production
 When you're ready to build the application for production:
@@ -115,7 +115,7 @@ When you're ready to build the application for production:
 ```bash
 npm run build
 ```
-This will create an optimized version of the application in the .next folder. You can run this build with:
+This will create an optimized version of the application in the **`.next`** folder. You can run this build with:
 ```bash
 npm run start
 ```

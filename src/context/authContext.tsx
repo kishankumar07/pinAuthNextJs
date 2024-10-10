@@ -8,7 +8,7 @@ import bcrypt from 'bcryptjs'
 
 interface AuthcontextType{
       user:string|null;
-      login:(username:string,pin:string) => Promise<void>
+      login:(username:string,pin:string) => Promise<boolean>
       logout:()=>void
 }
 

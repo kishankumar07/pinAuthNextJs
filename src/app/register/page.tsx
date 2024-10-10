@@ -48,11 +48,11 @@ const Register = ()=>{
       }
 
       return(
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center min-h-screen">
+            <div className="bg-gradient-to-br from-blue-800 to-indigo-300 flex items-center justify-center min-h-screen">
                   <div className="bg-white p-10 rounded-lg shadow-md w-96">
 
                   <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Register</h1>
-                  <form onSubmit={handleRegister} className="flex flex-col gap-4">
+                  <form onSubmit={(e)=>{handleRegister(e)}} className="flex flex-col gap-4">
                         <div>
                               <input className="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" value={userName}  onChange={(e)=>setUserName(e.target.value)} placeholder="Enter Username"/>
                         </div>
